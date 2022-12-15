@@ -22,12 +22,17 @@ stackMethods.pop = function () {
 
   for (var key in this.storage) {
     if (parseInt(key) === this.idx - 1) {
-      console.log('im in here')
       var res = this.storage[key];
       delete this.storage[key];
     }
-    console.log(res)
   }
+
+  // this.storage.forEach(function(val, key) {
+  //   if (parseInt(key) === this.idx - 1) {
+  //     var res = this.storage[key];
+  //     delete this.storage[key];
+  //   }
+  // }, this.instance)
 
   // if number version of key is equal to idx - 1
     // store the value at that key
@@ -36,7 +41,6 @@ stackMethods.pop = function () {
   if (this.idx > 0) {
     this.idx--
   }
-  console.log(this.idx)
 
   // return stored res
   return res
