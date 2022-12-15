@@ -22,7 +22,6 @@ var Stack = function() {
   //removes largest number key
   //decreases counter
     for (var key in storage) {
-      console.log(key, 'key', index, 'idx', storage)
       if (parseInt(key) === index - 1) {
         var res = storage[key]
         delete(storage[key])
@@ -42,11 +41,5 @@ var Stack = function() {
     return storage.counter;
   };
 
-
   return someInstance;
 };
-
-
-// var myStack = Stack()
-// myStack.push('5') //storage {'0': '5'}
-
