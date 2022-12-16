@@ -23,7 +23,6 @@ Graph.prototype.contains = function(node) {
 // Removes a node from the graph.
 Graph.prototype.removeNode = function(node) {
   // perform lookup on adjacency[node]
-  console.log(this.adjacency)
   if (this.adjacency[node]) {
     // iterate over edges associated with that node
     for (var edge of this.adjacency[node]) {
