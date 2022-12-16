@@ -67,6 +67,6 @@ var Node = function(value) {
  * Complexity: What is the time complexity of the above functions?
  */
 
-// var LinkedList = LinkedList()
-// LinkedList.addToTail(5)
-// LinkedList.addToTail(5)
+// O(1)
+// O(1)
+// O(n)
