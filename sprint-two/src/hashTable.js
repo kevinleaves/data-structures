@@ -3,14 +3,11 @@
 var HashTable = function() {
   this._limit = 8;
   this._storage = LimitedArray(this._limit);
-
-
 };
 
 HashTable.prototype.insert = function(k, v) {
   var index = getIndexBelowMaxForKey(k, this._limit);
   // if no bucket at index
-  console.log(this._storage)
   if (!this._storage.get(index)) {
     // create bucket at index
     this._storage.set(index, []);
