@@ -8,10 +8,8 @@ var Stack = function() {
   instance.idx = 0
   instance.storage = {};
 
-  // _.extend(instance, stackMethods)
-  instance.push = stackMethods.push
-  instance.pop = stackMethods.pop
-  instance.size = stackMethods.size
+  _.extend(instance, stackMethods)
+
 
   return instance
 };

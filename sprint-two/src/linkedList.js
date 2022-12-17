@@ -14,7 +14,6 @@ var LinkedList = function() {
   list.addToTail = function(value) {
     //create the new tail node
     var newTail = Node(value);
-
     //if the list is empty, the first node added is both the head and the tail
     if (list.head === null) {
       list.head = newTail;
