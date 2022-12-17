@@ -30,7 +30,8 @@ treeMethods.contains = function(target) {
     // call contains on every child node
     doesContain = this.children[i].contains(target);
     if (doesContain === true) {
-      break;
+      //break;
+      return doesContain;
     }
   }
 
