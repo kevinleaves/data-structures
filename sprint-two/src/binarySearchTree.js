@@ -23,15 +23,9 @@ BinarySearchTree.prototype.insert = function(value) {
     if (!this.right) {
       this.right = BinarySearchTree(value)
     } else {
-      // debugger;
       this.right.insert(value)
     }
   }
-  // else
-    // if this.right is null
-      // this.right = BinarySearchTree(value)
-    // else
-      // call insert with this.right
 };
 
 BinarySearchTree.prototype.contains = function(value) {
@@ -77,11 +71,15 @@ BinarySearchTree.prototype.depthFirstLog = function(cb) {
 
   // if node on right does not have a value of null
   if (this.right) {
+    // recursively call depthFirstLog on node on right with argument of cb
     this.right.depthFirstLog(cb)
   }
-    // recursively call depthFirstLog on node on right with argument of cb
 };
 
 /*
  * Complexity: What is the time complexity of the above functions?
  */
+
+//insert: logn
+// contains: logn
+// dfl: o(n)
