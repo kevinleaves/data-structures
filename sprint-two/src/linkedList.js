@@ -1,50 +1,47 @@
-var LinkedList = function () {
-  var list = {};
-  list.head = null;
-  list.tail = null;
+/*
+ * Complexity: What is the time complexity of the above functions?
+ */
 
-  list.addToTail = function (value) {
-    let node = Node(value);
+class LinkedList {
+  constructor() {
+    this.list = {};
+    this.head = null;
+    this.tail = null;
+  }
+
+  addToTail(value) {
+    let node = new ListNode(value);
     // edge case empty list, head becomes tail
-    if (!list.head) {
-      list.head = node;
+    if (!this.head) {
+      this.head = node;
     } else {
-      list.tail.next = node;
+      this.tail.next = node;
     }
-    list.tail = node;
-  };
+    this.tail = node;
+  }
 
-  list.removeHead = function () {
-    // remove head call on an empty list?
-    const prevHead = list.head;
-    list.head = list.head.next;
+  removeHead() {
+    let prevHead = this.head;
+    this.head = this.head.next;
     prevHead.next = null;
     return prevHead.value;
-  };
+  }
 
-  list.contains = function (target) {
-    let curr = list.head;
+  contains(target) {
+    let curr = this.head;
     while (curr) {
-      if (target === curr.value) {
+      if (curr.value === target) {
         return true;
       }
       curr = curr.next;
     }
     return false;
-  };
+  }
+}
 
-  return list;
-};
-
-var Node = function (value) {
-  var node = {};
-
-  node.value = value;
-  node.next = null;
-
-  return node;
-};
-
-/*
- * Complexity: What is the time complexity of the above functions?
- */
+class ListNode {
+  constructor(value, next = null) {
+    this.value = value;
+    this.next = next;
+  }
+}
